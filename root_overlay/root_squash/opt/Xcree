@@ -1,0 +1,19 @@
+#!/bin/bash
+
+/home/cccp/.cargo/bin/xidlehook \
+	--socket /run/user/1000/xidlehook.sock \
+	--timer 30 \
+        'if pgrep -x i3lock > /dev/null; then /home/cccp/.cargo/bin/xidlehook-client --socket /run/user/1000/xidlehook.sock control --action trigger --timer 3 ; fi' \
+        '' \
+        --timer 260 \
+        '/opt/Brghtnss-ww' \
+        '/opt/Brghtnss-pp' \
+        --timer 10 \
+        'pgrep -x i3lock || /opt/LckrXcree' \
+        '' \
+        --timer 10 \
+        '/opt/Xcree-ww' \
+        '/opt/Xcree-pp' \
+        --timer 890 \
+        '/opt/Sspnd' \
+        '/opt/Xcree-pp' \

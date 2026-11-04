@@ -1,0 +1,12 @@
+#!/bin/bash
+if xrandr | grep -q "VGA-1 connected"; then
+	for i in {50..00}
+		do xrandr --output VGA-1 --brightness "0.$i"
+	        done
+	xset dpms force off
+else
+	for i in {50..00}
+	        do xrandr --output LVDS-1 --brightness "0.$i"
+	        done
+	xset dpms force off
+fi
