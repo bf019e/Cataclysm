@@ -2,7 +2,7 @@ subarch: amd64
 version_stamp: @TIMESTAMP@
 target: livecd-stage1
 rel_type: 23.0-default
-profile: default/linux/amd64/23.0/no-multilib
+profile: default/linux/amd64/23.0
 snapshot_treeish: 20261104.xz
 source_subpath: stage3-amd64-openrc-*
 compression_mode: pixz
