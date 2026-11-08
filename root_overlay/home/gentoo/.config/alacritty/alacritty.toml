@@ -1,0 +1,3 @@
+[window]
+opacity = 0.64
+# blur = true # Enables background blur on macOS or KDE Wayland

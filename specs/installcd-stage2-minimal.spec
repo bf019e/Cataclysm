@@ -5,22 +5,22 @@ rel_type: 23.0-default
 profile: default/linux/amd64/23.0/no-multilib
 snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/livecd-stage1-amd64-@TIMESTAMP@
-portage_confdir: @REPO_DIR@/releases/portage/isos
+#portage_confdir: @REPO_DIR@/releases/portage/isos
 
 livecd/bootargs: dokeymap nodhcp
 livecd/fstype: squashfs
-livecd/iso: install-amd64-minimal-@TIMESTAMP@.iso
+livecd/iso: CCCP-amd64-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo-amd64-@DATESTAMP@
+livecd/volid: CCCP-amd64-@DATESTAMP@
 livecd/cdtar: /usr/share/catalyst/livecd/cdtar/grub-theme-gentoo_frosted.tar.bz2
 
 livecd/rcadd: dbus|default gpm|default NetworkManager|default
 
 boot/kernel: gentoo
 
-boot/kernel/gentoo/distkernel: yes
-boot/kernel/gentoo/dracut_args: --xz --no-hostonly -a dmsquash-live -a dmsquash-live-ntfs -a mdraid -o btrfs -o crypt -o i18n -o usrmount -o lunmask -o qemu -o qemu-net -o nvdimm -o multipath -i /lib/keymaps /lib/keymaps -I busybox
-boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/amd64/dist-amd64-livecd.config
+#boot/kernel/gentoo/distkernel: yes
+#boot/kernel/gentoo/dracut_args: --xz --no-hostonly -a dmsquash-live -a dmsquash-live-ntfs -a mdraid -o btrfs -o crypt -o i18n -o usrmount -o lunmask -o qemu -o qemu-net -o nvdimm -o multipath -i /lib/keymaps /lib/keymaps -I busybox
+#boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/amd64/dist-amd64-livecd.config
 boot/kernel/gentoo/packages: --usepkg n net-wireless/broadcom-sta sys-fs/zfs
 
 livecd/overlay: stage3-amd64-openrc-20261101T164556Z.tar.xz
@@ -71,7 +71,7 @@ livecd/unmerge:
 	sys-libs/gdbm
 	sys-kernel/dracut
 	sys-kernel/linux-headers
-	sys-kernel/gentoo-kernel-bin
+	#sys-kernel/gentoo-kernel-bin
 
 livecd/empty:
 	/boot

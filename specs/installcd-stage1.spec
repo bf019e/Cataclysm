@@ -3,15 +3,17 @@ version_stamp: @TIMESTAMP@
 target: livecd-stage1
 rel_type: 23.0-default
 profile: default/linux/amd64/23.0/no-multilib
-snapshot_treeish: @TREEISH@
-source_subpath: 23.0-default/stage3-amd64-openrc-@TIMESTAMP@
+snapshot_treeish: 20261104.xz
+source_subpath: stage3-amd64-openrc-*
 compression_mode: pixz
-portage_confdir: @REPO_DIR@/releases/portage/isos
+#portage_confdir: @REPO_DIR@/releases/portage/isos
 
-livecd/overlay: stage3-amd64-openrc-20261101T164556Z.tar.xz
-livecd/root_overlay: /var/tmp/catalyst/root_overlay
-livecd/portage_confdir: /var/tmp/catalyst/portage_confdir
-
+#livecd/overlay: stage3-amd64-openrc-20261101T164556Z.tar.xz
+#livecd/root_overlay: /var/tmp/catalyst/root_overlay
+#livecd/portage_confdir: /var/tmp/catalyst/portage_confdir
+#root_overlay: /var/tmp/catalyst/root_overlay
+portage_confdir: /var/tmp/catalyst/portage_confdir
+repos: "/var/db/repos/guru /var/db/repos/librewolf"
 
 livecd/use:
 	alsa
@@ -49,7 +51,7 @@ livecd/packages:
 	app-crypt/pinentry
 	app-editors/emacs
 	app-editors/hexcurse
-	app-editors/nano
+#	app-editors/nano
 	app-editors/vim
 	app-emacs/ebuild-mode
 	app-emulation/cloud-init
@@ -197,7 +199,9 @@ livecd/packages:
 	sys-process/procps
 	sys-process/psmisc
 
-	www-client/librewolf
+# ESSENTIALS
+	sys-kernel/gentoo-kernel-bin
+	www-client/librewolf-bin
 	app-admin/conky
 	x11-misc/i3lock-color
 	x11-misc/pcmanfm
@@ -207,4 +211,21 @@ livecd/packages:
 	x11-wm/i3
 	x11-base/xorg-server
 	x11-misc/i3blocks
-	
+	sys-auth/seatd
+	x11-terms/kitty
+	x11-terms/alacritty
+	x11-misc/picom
+	x11-apps/setxkbmap
+	x11-misc/numlockx
+	media-sound/volumeicon
+	gnome-extra/nm-applet
+	x11-apps/xrandr
+	sys-fs/fuse
+	media-fonts/noto
+	media-fonts/noto-cjk
+	media-fonts/ja-ipafonts
+	app-admin/doas
+
+#NOT ESSENTIALS
+	sys-block/gparted
+	app-office/libreoffice-bin

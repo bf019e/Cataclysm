@@ -1,67 +1,30 @@
-#Network Manager
+#Stage 1
 net-wireless/wpa_supplicant dbus
-
-#Doas
 app-admin/doas persist
-
-#SeatD
 sys-auth/seatd server
-
-#Ly
-x11-misc/ly X
-media-libs/libglvnd X
-sys-auth/pambase elogind
-
-#Xorg (ncluding Correction For Minecraft And CCCP Mod)
 sys-apps/dbus X
-media-libs/mesa-amber video_cards_i915 video_cards_i965
-media-libs/mesa video_cards_i915
-x11-drivers/xf86-video-intel dri uxa
-
-#i3
 x11-libs/cairo X
 x11-libs/libxkbcommon X
 x11-libs/pango X
 media-libs/freetype harfbuzz
-
-#Feh
 media-gfx/feh xinerama
-
-#M Player
 media-video/ffmpeg opus x264 vorbis lame
-
-#Conky
 app-admin/conky X imlib lua lua-imlib lua-cairo bundled-toluapp truetype xinerama lua-cairo-xlib
-
-#Rofi
 x11-misc/rofi X
-
-#Pc Man FM
 x11-libs/gdk-pixbuf jpeg gif
 x11-libs/libfm gtk udisks
 app-crypt/gcr gtk
-
-#Gnome Virtual File System
 gnome-base/gvfs udisks fuse mtp
-
-#Librewolf
-www-client/librewolf l10n_es-MX
-media-libs/libvpx postproc
-
-#Japanese Fonts
 media-fonts/noto-cjk X
 media-fonts/ja-ipafonts X
-
-#libre Office
 app-office/libreoffice-bin l10n_es
 app-text/xmlto text
-
-#Puddletag
-dev-python/pyqt6 svg
-
-#Opus Tools
-media-sound/opus-tools flac
-
-#Catalyst
-sys-apps/util-linux python
-sys-boot/grub grub_platforms_efi-32
+media-libs/libglvnd X
+sys-auth/pambase elogind
+sys-fs/lvm2 lvm
+net-libs/ngtcp2 gnutls
+sys-kernel/installkernel dracut
+media-libs/libpulse X
+media-plugins/alsa-plugins pulseaudio
+dev-cpp/gtkmm X
+dev-cpp/cairomm X

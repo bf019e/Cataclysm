@@ -1,6 +1,5 @@
-#Ly
-x11-misc/ly ~amd64
-app-misc/brightnessctl ~amd64
+#unRar
+app-arch/unrar ~amd64
 
 #i3lock Color
 x11-misc/i3lock-color ~amd64
@@ -12,12 +11,3 @@ x11-libs/libfm ~amd64
 #Librewolf
 www-client/librewolf ~amd64
 dev-libs/nss ~amd64
-
-#Puddletag (Mp3Tag)
-media-sound/puddletag ~amd64
-
-#Discord
-net-im/vesktop-bin ~amd64
-
-#Catalyst
-dev-util/catalyst ~amd64

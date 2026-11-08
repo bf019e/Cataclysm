@@ -1,0 +1,7 @@
+#!/bin/bash
+
+while pgrep -x emerge > /dev/null; do
+    sleep 5
+done
+doas loginctl suspend
+#doas loginctl suspend-then-hibernate
